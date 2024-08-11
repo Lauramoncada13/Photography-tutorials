@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales de Fotografía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-bar select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .tutorials-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .tutorial-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            width: calc(25% - 40px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tutorial-card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .tutorial-card h3 {
+            margin-top: 10px;
+        }
+        .tutorial-card p {
+            margin: 5px 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tutoriales de Fotografía</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar tutoriales...">
+            <select id="category">
+                <option value="">Todas las categorías</option>
+                <option value="paisaje">Paisaje</option>
+                <option value="retratos">Retratos</option>
+                <option value="macro">Macro</option>
+                <option value="nocturna">Nocturna</option>
+            </select>
+            <select id="difficulty">
+                <option value="">Todos los niveles</option>
+                <option value="principiante">Principiante</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+        </div>
+
+        <div class="tutorials-list">
+            <!-- Tutorial 1 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/Bg2XYuODVak?si=hixFVJkxQRac89zu" target="_blank">
+                    <img src="https://i.ytimg.com/vi/3kGJQQr2Bz4/maxresdefault.jpg" alt="Paisaje">
+                    <h3>Introducción a la Fotografía de Paisaje</h3>
+                    <p><strong>Categoría:</strong> Paisaje</p>
+                    <p><strong>Nivel:</strong> Principiante</p>
+                    <p>Aprende los conceptos básicos para capturar impresionantes paisajes.</p>
+                </a>
+            </div>
+            <!-- Tutorial 2 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/oMeZ_CVB1rE?si=iSCqaSeRwP-v2JQ4" target="_blank" rel="noopener noreferrer">
+        <img src="https://i.ytimg.com/vi/5y9I-KSxl_w/maxresdefault.jpg" alt="Técnicas Avanzadas de Retratos">
+        <h3>Técnicas Avanzadas de Retratos</h3>
+        <p><strong>Categoría:</strong> Retratos</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Descubre técnicas profesionales para tomar retratos impactantes.</p>
+    </a>
+</div>
+
+            <!-- Tutorial 3 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/DcMcmI2LSYI?si=sSEUEqKBXcqtX0kv" target="_blank">
+                    <img src="https://i.ytimg.com/vi/5y9I-KSxl_w/maxresdefault.jpg" alt="macro">
+                    <h3>Fotografía Macro para Principiantes</h3>
+                    <p><strong>Categoría:</strong> Macro</p>
+                    <p><strong>Nivel:</strong> Principiante</p>
+                    <p>Guía paso a paso para comenzar con la fotografía macro.</p>
+                </a>
+            </div>
+            <!-- Tutorial 4 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/t4f50N28U7c?si=MN81-1rcbhQ7sS-_" target="_blank">
+                    <img src="https://i.ytimg.com/vi/5y9I-KSxl_w/maxresdefault.jpg" alt="Nocturna">
+                    <h3>Capturando la Magia de la Fotografía Nocturna</h3>
+                    <p><strong>Categoría:</strong> Nocturna</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Aprende a capturar el cielo estrellado y escenas nocturnas.</p>
+                </a>
+            </div>
+            <!-- Tutorial 5 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/IEMt2e7w3jw?si=r2KxZtXoOzMKH3Nr" target="_blank">
+                    <img src="https://i.ytimg.com/vi/nqH1fP6T86E/maxresdefault.jpg" alt="Paisaje">
+                    <h3>Composición en Fotografía de Paisaje</h3>
+                    <p><strong>Categoría:</strong> Paisaje</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Mejora tus habilidades de composición en paisajes.</p>
+                </a>
+            </div>
+            <!-- Tutorial 6 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/120v6jjOmmc?si=wBdHwjlMRErM6mys" target="_blank">
+                    <img src="https://i.ytimg.com/vi/vIBiqEDJ7p4/maxresdefault.jpg" alt="Retrato">
+                    <h3>Iluminación en Retratos</h3>
+                    <p><strong>Categoría:</strong> Retratos</p>
+                    <p><strong>Nivel:</strong> Principiante</p>
+                    <p>Aprende los conceptos básicos de iluminación para retratos.</p>
+                </a>
+            </div>
+            <!-- Tutorial 7 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/wwsQgyDEU00?si=4g_xJ4iuM4l5WBQZ" target="_blank">
+                    <img src="https://i.ytimg.com/vi/7cqQbXr9Y4Y/maxresdefault.jpg" alt="Macro">
+                    <h3>Técnicas Avanzadas de Fotografía Macro</h3>
+                    <p><strong>Categoría:</strong> Macro</p>
+                    <p><strong>Nivel:</strong> Avanzado</p>
+                    <p>Explora técnicas avanzadas para fotografía macro.</p>
+                </a>
+            </div>
+            <!-- Tutorial 8 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/t4f50N28U7c?si=7MCQdQ9r0730LuOz" target="_blank">
+                    <img src="https://i.ytimg.com/vi/ML3XToekf8A/maxresdefault.jpg" alt="Nocturna">
+                    <h3>Edición de Fotografías Nocturnas</h3>
+                    <p><strong>Categoría:</strong> Nocturna</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Aprende a editar y mejorar tus fotos nocturnas.</p>
+                </a>
+            </div>
+            <!-- Tutorial 9 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/wk1FYlOPb-4?si=HHi3jUIFjSU7MyEH" target="_blank">
+                    <img src="https://i.ytimg.com/vi/6RjGVu6J_wI/maxresdefault.jpg" alt="Paisaje Urbano">
+                    <h3>Fotografía de Paisajes Urbanos</h3>
+                    <p><strong>Categoría:</strong> Paisaje Urbano</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Consejos para capturar la esencia de paisajes urbanos.</p>
+                </a>
+            </div>
+            <!-- Tutorial 10 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/X8jUs-dHv9A?si=NwADIxWX1PWFlGEf" target="_blank">
+                    <img src="https://i.ytimg.com/vi/HRJ6-SGRJtQ/maxresdefault.jpg" alt="Retrato">
+                    <h3>Cómo Usar el Flash en Retratos</h3>
+                    <p><strong>Categoría:</strong> Retratos</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Aprende a utilizar el flash para mejorar tus retratos.</p>
+                </a>
+            </div>
+            <!-- Tutorial 11 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/khcofoor0TU?si=Us0kkR-S0pWrSksH" target="_blank">
+                    <img src="https://i.ytimg.com/vi/GTyF__hBz5E/maxresdefault.jpg" alt="Macro">
+                    <h3>Configuración Avanzada para Fotografía Macro</h3>
+                    <p><strong>Categoría:</strong> Macro</p>
+                    <p><strong>Nivel:</strong> Avanzado</p>
+                    <p>Configura tu cámara para capturar macrofotografías detalladas.</p>
+                </a>
+            </div>
+            <!-- Tutorial 12 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/d_VcPkEmUk0?si=PaqS5QEAvNxr4O8d" target="_blank">
+                    <img src="https://i.ytimg.com/vi/2O_BH3GGzFs/maxresdefault.jpg" alt="Nocturna">
+                    <h3>Fotografía Nocturna en la Ciudad</h3>
+                    <p><strong>Categoría:</strong> Nocturna</p>
+                    <p><strong>Nivel:</strong> Principiante</p>
+                    <p>Guía para tomar fotografías nocturnas en entornos urbanos.</p>
+                </a>
+            </div>
+            <!-- Tutorial 13 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/V-7LdRt42Mc?si=MoXQ5-tNt_Ew8pnC" target="_blank">
+                    <img src="https://i.ytimg.com/vi/nP7P8ug7d0s/maxresdefault.jpg" alt="Paisaje">
+                    <h3>Cómo Capturar el Amanecer en Paisajes</h3>
+                    <p><strong>Categoría:</strong> Paisaje</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Técnicas para capturar amaneceres en fotografía de paisajes.</p>
+                </a>
+            </div>
+            <!-- Tutorial 14 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/dMjDFrdtHBM?si=poD4ODiYno3Xn4xt" target="_blank">
+                    <img src="https://i.ytimg.com/vi/Hg5UuFTdF7A/maxresdefault.jpg" alt="Retrato">
+                    <h3>Retratos con Luz Natural</h3>
+                    <p><strong>Categoría:</strong> Retratos</p>
+                    <p><strong>Nivel:</strong> Principiante</p>
+                    <p>Captura retratos utilizando solo luz natural.</p>
+                </a>
+            </div>
+            <!-- Tutorial 15 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/0jtPfZ4w0f0?si=Pd33-iE1-_q8BtVP" target="_blank">
+                    <img src="https://i.ytimg.com/vi/fdF0z7lM0w8/maxresdefault.jpg" alt="Macro">
+                    <h3>Cómo Enfocar en Fotografía Macro</h3>
+                    <p><strong>Categoría:</strong> Macro</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Aprende técnicas para enfocar en fotografía macro.</p>
+                </a>
+            </div>
+            <!-- Tutorial 16 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/a_60tKOG2qQ?si=SGnL2QL4-GpOYzE3" target="_blank">
+                    <img src="https://i.ytimg.com/vi/aIpmcQ7ww0s/maxresdefault.jpg" alt="Nocturna">
+                    <h3>Configuración de Cámara para Fotografía Nocturna</h3>
+                    <p><strong>Categoría:</strong> Nocturna</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Configura tu cámara para capturar las mejores fotos nocturnas.</p>
+                </a>
+            </div>
+            <!-- Tutorial 17 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/VdL1nW_GoxM?si=b0KFjoSYeMUfc2bu" target="_blank">
+                    <img src="https://i.ytimg.com/vi/0U3lqTzQkzg/maxresdefault.jpg" alt="Paisaje">
+                    <h3>Cómo Usar el Filtro ND en Fotografía de Paisaje</h3>
+                    <p><strong>Categoría:</strong> Paisaje</p>
+                    <p><strong>Nivel:</strong> Intermedio</p>
+                    <p>Utiliza filtros ND para mejorar tus fotos de paisaje.</p>
+                </a>
+            </div>
+            <!-- Tutorial 18 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/xGCeQHyV84k?si=S-Sn2nKCvYiU4R5i" target="_blank">
+                    <img src="https://i.ytimg.com/vi/Ll-QnqJQ5J4/maxresdefault.jpg" alt="Retrato">
+                    <h3>Fotografía de Retratos en Estudio</h3>
+                    <p><strong>Categoría:</strong> Retratos</p>
+                    <p><strong>Nivel:</strong> Avanzado</p>
+                    <p>Aprende a capturar retratos en un entorno de estudio.</p>
+                </a>
+            </div>
+            <!-- Tutorial 19 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/p2teeiUsvqg?si=shHyDUGEUwCl0ZYz" target="_blank">
+                    <img src="https://i.ytimg.com/vi/Td9U0CHz4qQ/maxresdefault.jpg" alt="Macro">
+                    <h3>Creando Fotografías Macro Creativas</h3>
+                    <p><strong>Categoría:</strong> Macro</p>
+                    <p><strong>Nivel:</strong> Avanzado</p>
+                    <p>Explora ideas creativas para fotografía macro.</p>
+                </a>
+            </div>
+            <!-- Tutorial 20 -->
+            <div class="tutorial-card">
+                <a href="https://youtu.be/vUmwYtmDG0w?si=-88h7v0-y3H8Z3J5" target="_blank">
+                    <img src="https://i.ytimg.com/vi/lR5H6avz1Co/maxresdefault.jpg" alt="Nocturna">
+                    <h3>Consejos para Fotografía Nocturna de Estrellas</h3>
+                    <p><strong>Categoría:</strong> Nocturna</p>
+                    <p><strong>Nivel:</strong> Avanzado</p>
+                    <p>Captura el cielo estrellado con estos consejos avanzados.</p>
+                </a>
+            </div>
+<!-- Tutorial 21 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/Y1i5ZzK6cC8" target="_blank">
+        <img src="https://i.ytimg.com/vi/Y1i5ZzK6cC8/maxresdefault.jpg" alt="Fotografía de Producto">
+        <h3>Fotografía de Producto en Estudio</h3>
+        <p><strong>Categoría:</strong> Producto</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Aprende técnicas para fotografiar productos de forma profesional en un estudio.</p>
+    </a>
+</div>
+<!-- Tutorial 22 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/nRr1F2-sbDI" target="_blank">
+        <img src="https://i.ytimg.com/vi/nRr1F2-sbDI/maxresdefault.jpg" alt="Retrato Creativo">
+        <h3>Retrato Creativo con Luz Natural</h3>
+        <p><strong>Categoría:</strong> Retratos</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Descubre cómo utilizar la luz natural para crear retratos únicos y creativos.</p>
+    </a>
+</div>
+<!-- Tutorial 23 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/P8zXsK4gKbI" target="_blank">
+        <img src="https://i.ytimg.com/vi/P8zXsK4gKbI/maxresdefault.jpg" alt="Fotografía de Eventos">
+        <h3>Fotografía de Eventos en Interiores</h3>
+        <p><strong>Categoría:</strong> Eventos</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Aprende a capturar eventos en interiores con técnicas de iluminación y composición.</p>
+    </a>
+</div>
+<!-- Tutorial 24 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/YyRbT2dn1f4" target="_blank">
+        <img src="https://i.ytimg.com/vi/YyRbT2dn1f4/maxresdefault.jpg" alt="Arquitectura Moderna">
+        <h3>Fotografía de Arquitectura Moderna</h3>
+        <p><strong>Categoría:</strong> Arquitectura</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Consejos y técnicas para fotografiar edificios modernos y estructuras arquitectónicas.</p>
+    </a>
+</div>
+<!-- Tutorial 25 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/K52XH5_q0jQ" target="_blank">
+        <img src="https://i.ytimg.com/vi/K52XH5_q0jQ/maxresdefault.jpg" alt="Fotografía de Naturaleza">
+        <h3>Fotografía de la Naturaleza en Movimiento</h3>
+        <p><strong>Categoría:</strong> Naturaleza</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Aprende a capturar la vida salvaje y el movimiento en la naturaleza.</p>
+    </a>
+</div>
+<!-- Tutorial 26 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/t1ZV4QfvwHE" target="_blank">
+        <img src="https://i.ytimg.com/vi/t1ZV4QfvwHE/maxresdefault.jpg" alt="Fotografía de Alimentos">
+        <h3>Fotografía de Alimentos: Técnicas de Iluminación</h3>
+        <p><strong>Categoría:</strong> Alimentos</p>
+        <p><strong>Nivel:</strong> Principiante</p>
+        <p>Descubre cómo iluminar y componer fotos apetitosas de alimentos.</p>
+    </a>
+</div>
+<!-- Tutorial 27 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/9U7PghrS3Tg" target="_blank">
+        <img src="https://i.ytimg.com/vi/9U7PghrS3Tg/maxresdefault.jpg" alt="Fotografía de Arquitectura">
+        <h3>Fotografía de Arquitectura Clásica</h3>
+        <p><strong>Categoría:</strong> Arquitectura</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Técnicas para capturar la belleza de la arquitectura clásica y histórica.</p>
+    </a>
+</div>
+<!-- Tutorial 28 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/n6O5gAEfx4g" target="_blank">
+        <img src="https://i.ytimg.com/vi/n6O5gAEfx4g/maxresdefault.jpg" alt="Fotografía de Mascotas">
+        <h3>Fotografía de Mascotas: Consejos Básicos</h3>
+        <p><strong>Categoría:</strong> Mascotas</p>
+        <p><strong>Nivel:</strong> Principiante</p>
+        <p>Aprende a capturar la personalidad de tus mascotas en fotos.</p>
+    </a>
+</div>
+<!-- Tutorial 29 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/e6kH-f5fIkY" target="_blank">
+        <img src="https://i.ytimg.com/vi/e6kH-f5fIkY/maxresdefault.jpg" alt="Fotografía en Blanco y Negro">
+        <h3>Fotografía en Blanco y Negro: Técnicas y Estilos</h3>
+        <p><strong>Categoría:</strong> Blanco y Negro</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Explora técnicas para capturar y editar fotos en blanco y negro.</p>
+    </a>
+</div>
+<!-- Tutorial 30 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/ukR5aEJlqRo" target="_blank">
+        <img src="https://i.ytimg.com/vi/ukR5aEJlqRo/maxresdefault.jpg" alt="Fotografía de Paisajes Urbanos">
+        <h3>Fotografía de Paisajes Urbanos en Horas Doradas</h3>
+        <p><strong>Categoría:</strong> Paisaje Urbano</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Captura los paisajes urbanos durante las horas doradas del día.</p>
+    </a>
+</div>
+<!-- Tutorial 31 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/B37se7qz6TI" target="_blank">
+        <img src="https://i.ytimg.com/vi/B37se7qz6TI/maxresdefault.jpg" alt="Fotografía de Retratos con Flash">
+        <h3>Retratos con Flash: Técnicas Avanzadas</h3>
+        <p><strong>Categoría:</strong> Retratos</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Mejora tus retratos usando técnicas avanzadas con flash.</p>
+    </a>
+</div>
+<!-- Tutorial 32 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/6tUN1-BE7a4" target="_blank">
+        <img src="https://i.ytimg.com/vi/6tUN1-BE7a4/maxresdefault.jpg" alt="Fotografía de Macro">
+        <h3>Fotografía Macro de Insectos: Guía Completa</h3>
+        <p><strong>Categoría:</strong> Macro</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Guía completa para capturar insectos en detalle con fotografía macro.</p>
+    </a>
+</div>
+<!-- Tutorial 33 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/4-Gz3C0gbfM" target="_blank">
+        <img src="https://i.ytimg.com/vi/4-Gz3C0gbfM/maxresdefault.jpg" alt="Fotografía de Nocturna">
+        <h3>Fotografía Nocturna en la Naturaleza</h3>
+        <p><strong>Categoría:</strong> Nocturna</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Captura la belleza de la noche en entornos naturales.</p>
+    </a>
+</div>
+<!-- Tutorial 34 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/8VhwWxH1mio" target="_blank">
+        <img src="https://i.ytimg.com/vi/8VhwWxH1mio/maxresdefault.jpg" alt="Fotografía de Comida">
+        <h3>Fotografía de Comida: Estilización y Presentación</h3>
+        <p><strong>Categoría:</strong> Comida</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Aprende a estilizar y presentar la comida para hacerla más atractiva en fotos.</p>
+    </a>
+</div>
+<!-- Tutorial 35 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/14TErtVgABg" target="_blank">
+        <img src="https://i.ytimg.com/vi/14TErtVgABg/maxresdefault.jpg" alt="Fotografía de Naturaleza">
+        <h3>Fotografía de Naturaleza: Técnicas de Captura</h3>
+        <p><strong>Categoría:</strong> Naturaleza</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Técnicas para capturar la belleza y la esencia de la naturaleza.</p>
+    </a>
+</div>
+<!-- Tutorial 36 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/jURtCBP7B_Y" target="_blank">
+        <img src="https://i.ytimg.com/vi/jURtCBP7B_Y/maxresdefault.jpg" alt="Fotografía en Interiores">
+        <h3>Fotografía en Interiores: Consejos para Principiantes</h3>
+        <p><strong>Categoría:</strong> Interiores</p>
+        <p><strong>Nivel:</strong> Principiante</p>
+        <p>Consejos básicos para tomar fotos en interiores de manera efectiva.</p>
+    </a>
+</div>
+<!-- Tutorial 37 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/gdOWex1REkE" target="_blank">
+        <img src="https://i.ytimg.com/vi/gdOWex1REkE/maxresdefault.jpg" alt="Fotografía de Retratos en Exteriores">
+        <h3>Retratos en Exteriores: Cómo Manejar la Luz Natural</h3>
+        <p><strong>Categoría:</strong> Retratos</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Aprende a manejar la luz natural para obtener mejores retratos en exteriores.</p>
+    </a>
+</div>
+<!-- Tutorial 38 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/Ns7s7rgFkTk" target="_blank">
+        <img src="https://i.ytimg.com/vi/Ns7s7rgFkTk/maxresdefault.jpg" alt="Fotografía de Moda">
+        <h3>Fotografía de Moda: Técnicas Básicas</h3>
+        <p><strong>Categoría:</strong> Moda</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Explora técnicas básicas para capturar la moda y los estilos.</p>
+    </a>
+</div>
+<!-- Tutorial 39 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/SgT_DTVuqz0" target="_blank">
+        <img src="https://i.ytimg.com/vi/SgT_DTVuqz0/maxresdefault.jpg" alt="Fotografía de Paisajes Marinos">
+        <h3>Fotografía de Paisajes Marinos: Técnicas y Consejos</h3>
+        <p><strong>Categoría:</strong> Paisaje Marino</p>
+        <p><strong>Nivel:</strong> Avanzado</p>
+        <p>Captura la esencia de los paisajes marinos con técnicas especializadas.</p>
+    </a>
+</div>
+<!-- Tutorial 40 -->
+<div class="tutorial-card">
+    <a href="https://youtu.be/ZQ4qD4CCwR8" target="_blank">
+        <img src="https://i.ytimg.com/vi/ZQ4qD4CCwR8/maxresdefault.jpg" alt="Fotografía de Eventos en Exteriores">
+        <h3>Fotografía de Eventos en Exteriores</h3>
+        <p><strong>Categoría:</strong> Eventos</p>
+        <p><strong>Nivel:</strong> Intermedio</p>
+        <p>Guía para capturar eventos y celebraciones al aire libre.</p>
+    </a>
+</div>
+</div>
+</div>
+<footer>
+<p>&copy; 2024 Tutoriales de Fotografía</p>
+</footer>
+</body>
+</html>
