@@ -1,0 +1,27 @@
+.tutorial-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  width: calc(33.333% - 32px); /* Tres columnas */
+  box-sizing: border-box;
+}
+
+.tutorials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tutorial-card h2 {
+  font-size: 1.5em;
+}
+
+form input {
+  margin-right: 8px;
+}
+
+form button {
+  cursor: pointer;
+}
+
